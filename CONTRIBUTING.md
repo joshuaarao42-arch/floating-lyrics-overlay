@@ -1,6 +1,10 @@
-# Contributing to Floating Lyrics Overlay
+# Contributing to floating-lyrics-overlay
 
-Thank you for helping improve Floating Lyrics Overlay, a Python and Tkinter desktop application for displaying lyrics in floating windows with animated text effects.
+Thank you for considering a contribution to this project. This guide explains how to propose changes, prepare your development environment, and submit work for review.
+
+## Project overview
+
+Python and Tkinter floating lyrics desktop application.
 
 ## Getting started
 
@@ -10,40 +14,61 @@ cd floating-lyrics-overlay
 python lyrics_visualizer.py
 ```
 
-Use Python 3.10 or newer and ensure Tkinter is available in your Python installation. If the project documents additional dependencies or a different launch command, follow the README.
+Follow the repository README and existing project configuration if setup commands or entry points have changed. Review the current code before introducing new tools or dependencies.
 
 ## What you can contribute
 
-- Improve floating-window positioning, sizing, and screen-edge behavior.
-- Refine typewriter timing, fade-out, and upward-drift animations.
-- Improve readability for long lines and different display resolutions.
-- Improve controls, configuration, and error handling.
-- Fix bugs and improve documentation.
+- Improve floating-window positioning
+- Typewriter timing
+- Fade-out and drift animations
+- Readability
+- Configuration
+- And screen-size behavior.
 
-## Project-specific guidelines
+Bug reports, documentation improvements, accessibility fixes, and reproducible tests are also welcome.
 
-Tkinter UI updates must remain compatible with its event loop. Avoid blocking the main thread with long-running tasks. Use scheduled UI callbacks for animation rather than busy loops. Ensure closing or restarting the overlay does not leave unwanted windows or callbacks running.
+## Project-specific requirements
 
-## Development standards
+Use Python 3.10+ with Tkinter. Keep UI updates on Tkinter's event loop and avoid blocking callbacks. Test long and short lines, repeated launches, animation timing, and different display sizes.
 
-Follow the existing Python style and naming conventions. Keep animation logic and window behavior understandable. Add dependencies only when they provide clear value, and document any new installation requirements.
+## Coding standards
 
-## Testing your changes
+- Follow the language, naming, formatting, and file-organization conventions already used in the repository.
+- Keep changes focused and functions or components easy to understand.
+- Validate user input and handle errors clearly.
+- Avoid unrelated refactoring and unnecessary dependencies.
+- Never commit secrets, credentials, generated local data, or personal information.
 
-Run the application and test short and long lyric lines, repeated launches, window movement, screen boundaries, and animation timing. Check behavior at different screen sizes and scaling settings when possible. Include screenshots or a short recording for visual changes.
+## Testing
+
+Run the application using the documented setup and test every workflow affected by your change. Include edge cases, not only the successful path. State what you tested and the result. Add screenshots for interface changes and sample inputs with expected outputs for calculation or logic changes.
 
 ## Branch and commit workflow
 
-Use a focused branch such as `feature/overlay-controls`, `fix/animation-timing`, or `docs/install-guide`. Use commit prefixes such as `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, and `test:`.
+Create a branch from the default branch. Use descriptive names such as `feature/short-description`, `fix/short-description`, or `docs/short-description`.
 
-## Opening a pull request
+Use clear commit prefixes:
+- `feat:` new functionality
+- `fix:` bug fixes
+- `docs:` documentation
+- `style:` formatting or visual-only changes
+- `refactor:` code restructuring without behavior changes
+- `test:` tests
 
-Explain the behavior before and after the change, list the steps used to test it, and include screenshots or a recording for visual or animation changes. Mention any platform-specific limitations.
+## Pull request guidelines
 
-## Reporting issues
+Before submitting, make sure your changes are focused and tested. In the pull request:
+1. Explain the problem and why the change is useful.
+2. Summarize what you changed.
+3. Link a related issue, if one exists.
+4. List the tests performed and their results.
+5. Add screenshots or sample output when relevant.
+6. Mention breaking changes, new dependencies, or known limitations.
 
-Include your operating system, Python version, reproduction steps, expected behavior, actual behavior, and error output where available. Remove personal information from logs.
+## Reporting bugs and requesting features
+
+Search existing issues before opening a new one. For bugs, include steps to reproduce, expected behavior, actual behavior, environment details, and sanitized screenshots or logs. For feature requests, explain the use case and the expected benefit. Do not publish credentials or private data.
 
 ## Code of conduct
 
-Keep collaboration respectful and constructive. Welcome beginners, explain feedback clearly, and avoid personal attacks or discriminatory behavior.
+Be respectful, patient, and constructive. Critique code and ideas rather than people. Harassment, discrimination, and abusive behavior are not acceptable.
